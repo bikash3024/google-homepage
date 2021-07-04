@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html,body{
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #google_img {
+            max-width: 30%;
+            margin: 155px auto 35px auto;
+            height: auto;
+            display: block;
+        }
+
+        #img_container {
+            display: block;
+        }
+
+        #input_container::before {
+            content: url('images/searchIcon.png');
+            position: relative;
+            top: 41px;
+            right: 258px;
+        }
+
+        #input_container::after {
+            content: url('images/micIcon.png');
+            position: relative;
+            bottom: 35px;
+            left: 255px;
+        }
+
+
+        #search_input {
+            display: block;
+            margin: 0 auto;
+            height: 44px;
+            max-width: 60%;
+            width: 30%;
+            border: 1px solid #dfe1e5;
+            border-radius: 35px;
+            ;
+
+        }
+
+        #search_buttons_container {
+            margin: 20px auto;
+        }
+
+        .search {
+            color: #5F6368;
+            padding: 13px 1.5em;
+            border: 1px solid white;
+            background-color: #f8f9fa;
+        }
+
+        #google_other-language {
+            display: block;
+            margin: 5px auto;
+        }
+        #footer{
+            display: flex;
+            flex-direction: column;
+            margin-top: auto;
+        }
+        #footer1{
+            text-align: left;
+        }
+        #footer2{
+            display: flex;
+            justify-content: space-between;
+        }
+        #left_side_footer_div{
+            display: flex;
+        }
+        #right_side_footer_div{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .footer_link{
+            padding: 0 15px;
+        }
+        .footer_strip{
+            background-color: #f8f9fa;
+        }
+    </style>
+
+</head>
+
+<body>
+    <figure id="img_container">
+        <img id="google_img" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+            alt="Google Logo">
+    </figure>
+    <div id="input_container">
+        <input id="search_input" type="text" name="search_input">
+    </div>
+    <div id="search_buttons_container">
+        <button id="search_button" class="search">Google Search</button>
+        <button id="feeling_lucky_button" class="search">I'm Feeling Lucky</button>
+    </div>
+    <div id="google_other-language">Google offered in: <a
+            href="https://www.google.com/setprefs?sig=0_xo7syOwYC0jzm6gCQCj2xnznZU4%3D&amp;hl=hi&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwi5v8v0sMnxAhWyILcAHZvnCZsQ2ZgBCA4">हिन्दी</a>
+        <a
+            href="https://www.google.com/setprefs?sig=0_xo7syOwYC0jzm6gCQCj2xnznZU4%3D&amp;hl=bn&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwi5v8v0sMnxAhWyILcAHZvnCZsQ2ZgBCA8">বাংলা</a>
+        <a
+            href="https://www.google.com/setprefs?sig=0_xo7syOwYC0jzm6gCQCj2xnznZU4%3D&amp;hl=te&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwi5v8v0sMnxAhWyILcAHZvnCZsQ2ZgBCBA">తెలుగు</a>
+        <a
+            href="https://www.google.com/setprefs?sig=0_xo7syOwYC0jzm6gCQCj2xnznZU4%3D&amp;hl=mr&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwi5v8v0sMnxAhWyILcAHZvnCZsQ2ZgBCBE">मराठी</a>
+        <a
+            href="https://www.google.com/setprefs?sig=0_xo7syOwYC0jzm6gCQCj2xnznZU4%3D&amp;hl=ta&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwi5v8v0sMnxAhWyILcAHZvnCZsQ2ZgBCBI">தமிழ்</a>
+        <a
+            href="https://www.google.com/setprefs?sig=0_xo7syOwYC0jzm6gCQCj2xnznZU4%3D&amp;hl=gu&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwi5v8v0sMnxAhWyILcAHZvnCZsQ2ZgBCBM">ગુજરાતી</a>
+        <a
+            href="https://www.google.com/setprefs?sig=0_xo7syOwYC0jzm6gCQCj2xnznZU4%3D&amp;hl=kn&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwi5v8v0sMnxAhWyILcAHZvnCZsQ2ZgBCBQ">ಕನ್ನಡ</a>
+        <a
+            href="https://www.google.com/setprefs?sig=0_xo7syOwYC0jzm6gCQCj2xnznZU4%3D&amp;hl=ml&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwi5v8v0sMnxAhWyILcAHZvnCZsQ2ZgBCBU">മലയാളം</a>
+        <a
+            href="https://www.google.com/setprefs?sig=0_xo7syOwYC0jzm6gCQCj2xnznZU4%3D&amp;hl=pa&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwi5v8v0sMnxAhWyILcAHZvnCZsQ2ZgBCBY">ਪੰਜਾਬੀ</a>
+    </div>
+    <footer id="footer">
+       <div class="footer_strip" id="footer1">
+           <p class="footer_link">India</p>
+       </div>
+       <div  class="footer_strip" id="footer2">
+           <div id="left_side_footer_div"><p class="footer_link">About</p><p class="footer_link">Advertising</p><p class="footer_link">Business</p><p class="footer_link">How Search works</p></div> 
+           <div id="right_side_footer_div"><p class="footer_link">Privacy</p><p class="footer_link">Terms</p><p class="footer_link"> Settings</p></div>
+           
+       </div>
+    </footer>
+</body>
+
+</html>
