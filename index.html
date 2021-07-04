@@ -3,16 +3,29 @@
 
 <head>
     <style>
-        html,body{
+        html {
+            font-size: 62.5%;
+        }
+
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+            padding: 0;
             margin: 0;
-            height: 100%;
+        }
+
+        html,
+        body {
+            margin: 0;
             width: 100%;
         }
+
         body {
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            font-family: arial, sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.6;
         }
 
         #google_img {
@@ -26,7 +39,7 @@
             display: block;
         }
 
-        #input_container::before {
+        /* #input_container::before {
             content: url('images/searchIcon.png');
             position: relative;
             top: 41px;
@@ -38,18 +51,23 @@
             position: relative;
             bottom: 35px;
             left: 255px;
+        } */
+        #input_container {
+            display: flex;
+            align-items: center;
+            width: 552px;
+            border-radius: 23px;
+            justify-content: space-between;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            padding: 1rem;
         }
 
 
         #search_input {
-            display: block;
-            margin: 0 auto;
-            height: 44px;
-            max-width: 60%;
-            width: 30%;
-            border: 1px solid #dfe1e5;
-            border-radius: 35px;
-            ;
+            border: none;
+            outline: none;
+            width:90%;
 
         }
 
@@ -68,30 +86,43 @@
             display: block;
             margin: 5px auto;
         }
-        #footer{
+
+        #footer {
             display: flex;
             flex-direction: column;
-            margin-top: auto;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            color:#70757a;
+            font-size: 1.4rem;
         }
-        #footer1{
+
+        #footer1 {
             text-align: left;
+            border-bottom: 1px solid #ddd;
         }
-        #footer2{
+
+        #footer2 {
             display: flex;
             justify-content: space-between;
         }
-        #left_side_footer_div{
+
+        #left_side_footer_div {
             display: flex;
         }
-        #right_side_footer_div{
+
+        #right_side_footer_div {
             display: flex;
             justify-content: flex-end;
         }
-        .footer_link{
+
+        .footer_link {
             padding: 0 15px;
         }
-        .footer_strip{
-            background-color: #f8f9fa;
+
+        .footer_strip {
+            padding: 1rem;
+            background-color: #f2f2f2;
         }
     </style>
 
@@ -103,7 +134,9 @@
             alt="Google Logo">
     </figure>
     <div id="input_container">
+        <img id="search_icon" src="images/searchIcon.png">
         <input id="search_input" type="text" name="search_input">
+        <img id="mic_icon" src="images/micIcon.png">
     </div>
     <div id="search_buttons_container">
         <button id="search_button" class="search">Google Search</button>
@@ -129,14 +162,23 @@
             href="https://www.google.com/setprefs?sig=0_xo7syOwYC0jzm6gCQCj2xnznZU4%3D&amp;hl=pa&amp;source=homepage&amp;sa=X&amp;ved=0ahUKEwi5v8v0sMnxAhWyILcAHZvnCZsQ2ZgBCBY">ਪੰਜਾਬੀ</a>
     </div>
     <footer id="footer">
-       <div class="footer_strip" id="footer1">
-           <p class="footer_link">India</p>
-       </div>
-       <div  class="footer_strip" id="footer2">
-           <div id="left_side_footer_div"><p class="footer_link">About</p><p class="footer_link">Advertising</p><p class="footer_link">Business</p><p class="footer_link">How Search works</p></div> 
-           <div id="right_side_footer_div"><p class="footer_link">Privacy</p><p class="footer_link">Terms</p><p class="footer_link"> Settings</p></div>
-           
-       </div>
+        <div class="footer_strip" id="footer1">
+            <p class="footer_link">India</p>
+        </div>
+        <div class="footer_strip" id="footer2">
+            <div id="left_side_footer_div">
+                <p class="footer_link">About</p>
+                <p class="footer_link">Advertising</p>
+                <p class="footer_link">Business</p>
+                <p class="footer_link">How Search works</p>
+            </div>
+            <div id="right_side_footer_div">
+                <p class="footer_link">Privacy</p>
+                <p class="footer_link">Terms</p>
+                <p class="footer_link"> Settings</p>
+            </div>
+
+        </div>
     </footer>
 </body>
 
